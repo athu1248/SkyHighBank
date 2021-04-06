@@ -1,0 +1,29 @@
+@charset "UTF-8";
+body{
+    background-color: blanchedalmond;
+}
+#tblDiv{
+    margin-top: 140px;
+    height: 50%;
+    overflow: auto;
+}
+#bodyTbl{
+    width: 60%;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bodyTbl caption{
+    color: rgb(1, 117, 156);
+    text-align: left;
+}
+#bodyTbl th{
+    background-color: rgb(1, 117, 156);
+    color: aliceblue;
+}
+#bodyTbl tr:nth-child(even){
+    background-color: lightcyan;
+}
+#bodyTbl tr:nth-child(odd){
+    background-color: lightblue;
+}

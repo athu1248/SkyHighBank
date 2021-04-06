@@ -1,0 +1,89 @@
+body {
+    background-color: blanchedalmond;
+}
+
+#loginBody {
+    background-color: bisque;
+    text-align: center;
+    width: 350px;
+    height: 300px;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#form1 label{
+    color: rgb(1, 117, 156);
+    font-weight: bold;
+    font-size: large;
+}
+#form1 input{
+    background-color: antiquewhite;
+    font-size: large;
+    border-color:black;
+    border-radius: 7px;
+    border-width: thin;
+}
+#submitBtn {
+    background-color: rgb(1, 117, 156);
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    width: 70px;
+    height: 40px;
+    padding: 0;
+}
+
+@media only screen and (max-width: 500px){
+    body {
+        background-color: blanchedalmond;
+    }
+    #heading {
+        background-color: orange;
+        font-size: 10px;
+        font-weight: bolder;
+        text-align:center;
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        top: 0px;
+        left: 0px;
+    }
+    #loginBody {
+        background-color: blanchedalmond;
+        text-align: center;
+        width: 100%;
+        height: 80%;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        overflow: hidden;
+        border: none;
+    }
+    #form1 label{
+        color: rgb(1, 117, 156);
+        font-weight: bold;
+        font-size: large;
+    }
+    #form1 input{
+        background-color: antiquewhite;
+        font-size: large;
+        border-color:black;
+        border-radius: 7px;
+        border-width: thin;
+    }
+    #submitBtn {
+        background-color: rgb(1, 117, 156);
+        border: none;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+    }
+    
+    
+}
