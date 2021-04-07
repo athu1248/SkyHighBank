@@ -1,17 +1,37 @@
 @charset "UTF-8";
-#heading {
-    background-color: orange;
-    font-size: 20px;
-    font-weight: bolder;
-    text-align:center;
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    top: 0px;
-    left: 0px;
+.navbar {
+    background-color: aliceblue;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+
+
+/*
+.heading li {
+    float: left;
+}
+.heading li a {
+    margin: 10px auto;
+    text-align: center;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.headingLogo {
+    font-size: 10px;
+    float: left;
+}
+.headingTitle {
+    font-size: 40px;
+}
+.headingBtn {
+    
 }
 @media only screen and (max-width: 500px){
-    #heading {
+    .heading {
         background-color: orange;
         font-size: 10px;
         font-weight: bolder;
@@ -22,4 +42,4 @@
         top: 0px;
         left: 0px;
     }
-}
+}*/

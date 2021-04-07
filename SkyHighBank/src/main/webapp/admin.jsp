@@ -23,9 +23,9 @@
 		<% } %>
 	</div>
 	
-	<% if (msg != null) {%>
+	<% if (msg != null) { %>
 		<p><%= msg %></p>
-	<%} %>
+	<% } %>
 
 	<div id="main">
 		<h1>ADMIN PAGE</h1>

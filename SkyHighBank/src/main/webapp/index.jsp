@@ -1,35 +1,51 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/obs_styles.css">
-<title>SkyHigh Bank</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<link rel="stylesheet" href="css/headingStyle.css">
+<title>Sky High Bank</title>
 </head>
 <body style="font-family: Verdana;">
 	<%
 	String msg = (String) request.getAttribute("MESSAGE");
 	String userID = (String) session.getAttribute("USER_ID");
 	%>
-	<div style="background-color: #e6ffff; padding: 5px; text-align: center;">
-		<h2><img src="images/skyhigh.png" width=50 />&nbsp;Skyhigh Banking Corporation</h2>
-		<% if (userID != null) { %>
-		<form action="login" method = "post">
-			<input type="hidden" name="hiddenField" value="logout">
-			<input type="submit" value="Logout" id="submitBtn">
-		</form>
-		<a href="login?l=0">My Portfolio</a>
-		<% } else { %>
-		<a href="login">Login</a>
-		<% } %>
-	</div>
+
+	<nav class="navbar sticky-top navbar-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="<%=request.getContextPath()%>" style="text-decoration: none;">
+				<img src="images/SkyHighLogo.svg" alt= "" width="15%" height="15%" class="d-inline-block align-text-center"/>
+				<p class="d-inline-block align-text-center">Sky High Bank</p>
+			</a>
+			<div class="d-flex">
+				<% if (userID != null) { %>
+				<a href="login?l=0">
+					<button type="button" class="btn btn-outline-primary">My Portfolio</button>
+				</a>
+				&nbsp;
+				<form action="login" method = "post">
+					<input type="hidden" name="hiddenField" value="logout">
+					<button class="btn btn-outline-danger" type="submit" value="Logout" id="submitBtn" >Logout</button>
+				</form>
+				<% } else { %>
+				<a href="login">Login</a>
+				<% } %>
+			</div>
+		</div>
+	</nav>
 	
 	<% if (msg != null) {%>
 		<p><%= msg %></p>
-	<%} %>
+	<% } %>
 
-	<div style="background-color: #f1f1f1; text-align: center; padding: 10px; margin-top: 7px; font-size: 12px;">
-		Copyright 2020 Skyhigh Banking Corporation</div>
+	<nav class="navbar fixed-bottom navbar-light bg-light">
+		<div class="container-fluid">
+	    	<span class="d-inline-block align-text-center" style="text-align: center; margin: 10px auto; font-size: 10px">
+	    		© Sky High Bank
+	    	</span>
+	  	</div>
+	</nav>
 </body>
 </html>

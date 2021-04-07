@@ -51,7 +51,7 @@
 				<p><%= msg %></p>
 			<%} %>
 			<h2>Previous Transaction Details</h2>
-			<table border=1>
+			<table border=1 class="tarnsactionTable">
 				<tr>
 					<th>Date</th>
 					<th>Payer/Payee Account Number</th>
