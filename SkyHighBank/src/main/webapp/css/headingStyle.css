@@ -1,6 +1,12 @@
 @charset "UTF-8";
 .navbar {
     background-color: aliceblue;
+    height: 10%;
+    min-height: 50px;
+}
+
+.container-fluid {
+	height: 100%;
 }
 
 .navbar-brand {

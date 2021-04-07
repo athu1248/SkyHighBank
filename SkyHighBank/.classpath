@@ -11,5 +11,6 @@
 	<classpathentry kind="lib" path="/Users/Atharva/eclipse-workspaceJavaEE/JEELibraries/javax.servlet_3.1.0.v201410161800.jar"/>
 	<classpathentry kind="lib" path="/Users/Atharva/eclipse-workspaceJavaEE/JEELibraries/javax.servlet.jsp_2.2.0.v201112011158.jar"/>
 	<classpathentry kind="lib" path="/Users/Atharva/eclipse-workspaceJavaEE/JEELibraries/mysql-connector-java-8.0.20.jar"/>
+	<classpathentry kind="lib" path="/Users/Atharva/eclipse-workspaceJavaEE/JEELibraries/jstl-1.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

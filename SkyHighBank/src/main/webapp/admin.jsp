@@ -1,37 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/obs_styles.css">
-<title>Create User</title>
-</head>
-<body style="font-family: Verdana;">
-	<%
-		String msg = (String) request.getAttribute("MESSAGE");
-		String userID = (String) session.getAttribute("USER_ID");
-	%>
-	
-	<div style="background-color: #e6ffff; padding: 5px; text-align: center;">
-		<h2><img src="images/skyhigh.png" width=50 />&nbsp;Skyhigh Banking Corporation</h2>
-		<% if (userID != null) { %>
-		<form action="login" method = "post">
-			<input type="hidden" name="hiddenField" value="logout">
-			<input type="submit" value="Logout" id="submitBtn">
-		</form>
-		<% } %>
-	</div>
-	
-	<% if (msg != null) { %>
-		<p><%= msg %></p>
-	<% } %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix = "t" tagdir = "/WEB-INF/tags" %>
+<%@ page import="model.Portfolio"%>
 
+
+<%
+String msg = (String) request.getAttribute("MESSAGE");
+String userID = (String) session.getAttribute("USER_ID");
+%>
+
+<c:set var="mainContent">
 	<div id="main">
 		<h1>ADMIN PAGE</h1>
+		<% if (msg != null) { %>
+			<p><%= msg %></p>
+		<% } %>
 		<form action="admin" method="post">
 			<input type="hidden" name="hiddenField" value="createuser">
-			<table style="height: 300; width: 350;">
+			<table style="height: 300; width: 350; caption-side: top;">
 				<caption>Enter User Details</caption>
 				<tr>
 					<td><label>email:</label></td>
@@ -69,9 +55,11 @@
 			<input type="submit" value="CreateUser" id="submitBtn">
 		</form>
 	</div>
+</c:set>
 
-	<div
-		style="background-color: #f1f1f1; text-align: center; padding: 10px; margin-top: 7px; font-size: 12px;">
-		Copyright 2020 Skyhigh Banking Corporation</div>
-</body>
-</html>
+
+<t:base title = "Sky High Bank - Portfolio" userID = "<%=userID %>">
+	<jsp:attribute name="content">
+		${mainContent}
+	</jsp:attribute>
+</t:base>
