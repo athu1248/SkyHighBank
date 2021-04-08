@@ -1,14 +1,40 @@
-@charset "UTF-8";* {
+@charset "UTF-8";
+
+* {
   box-sizing: border-box;
 }
 
+/* For header and footer */
+.navbar {
+    background-color: aliceblue;
+    height: 10%;
+    min-height: 50px;
+}
+.container-fluid {
+	height: 100%;
+}
+.navbar-brand {
+    font-size: 30px;
+}
+.navbarLogo {
+    width:15%;
+    height:15%;
+    padding:0px;
+}
+.footer {
+	text-align: center;
+	margin: 10px auto;
+	font-size: 10px
+}
+
+
+/* For login.jsp */
 .text-center {
   display: flex;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
 .form-signin {
   width: 100%;
   max-width: 400px;
@@ -16,6 +42,8 @@
   margin: auto;
 }
 
+
+/* For menu in main pages */
 .menu {
   float: left;
   width: 20%;
@@ -25,12 +53,14 @@
   margin-top: 7px;
   border-bottom: 1px solid #f1f1f1;
 }
+
 .main {
   float: left;
   width: 60%;
   padding: 0 20px;
   overflow: hidden;
 }
+
 .right {
   background-color: #f1f1f1;
   float: left;
@@ -39,6 +69,8 @@
   margin-top: 7px;
 }
 
+
+/* For the transaction view table */
 #tblDiv{
     margin-top: 140px;
     height: 50%;
@@ -75,6 +107,10 @@
     border: 1px solid black;
 }
 
+
+
+
+
 @media only screen and (max-width:800px) {
   /* For tablets: */
   .main {
@@ -84,14 +120,24 @@
   .right {
     width: 100%;
   }
+  .navbar-brand {
+    font-size: 25px;
+  }
+  .navbarLogo {
+    width: 15%;
+    height: 15%;
+  }
 }
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
   .menu, .main, .right{
     width: 100%;
   }
-}
-
-h2 {
-  font-family: "Lucida Bright";
+  .navbar-brand {
+    font-size: 20px;
   }
+  .navbarLogo {
+    width: 10%;
+    height: 10%;
+  }
+}

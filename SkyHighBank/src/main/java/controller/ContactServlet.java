@@ -102,11 +102,11 @@ public class ContactServlet extends HttpServlet {
 								RequestDispatcher dispatcher = request.getRequestDispatcher("contact.jsp");
 								dispatcher.forward(request, response);
 							} else {
-								RequestDispatcher dispatcher = request.getRequestDispatcher("error.html");
+								RequestDispatcher dispatcher = request.getRequestDispatcher("error.jsp");
 								dispatcher.forward(request, response);
 							}
 						} else {
-							RequestDispatcher dispatcher = request.getRequestDispatcher("error.html");
+							RequestDispatcher dispatcher = request.getRequestDispatcher("error.jsp");
 							dispatcher.forward(request, response);
 						}
 						

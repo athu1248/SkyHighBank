@@ -35,7 +35,7 @@ String userID = (String) session.getAttribute("USER_ID");
 </c:set>
 
 
-<t:main title = "Sky High Bank - Conatct" userID = "<%=userID %>">
+<t:main title = "Sky High Bank - Conatct" userID = "<%=userID %>" page="contact">
 	<jsp:attribute name="content">
 		${mainContent}
 	</jsp:attribute>
